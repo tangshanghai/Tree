@@ -75,6 +75,12 @@ class Tree{
         }
     }
 
+    /** 重置拷贝数据 */
+    resetCopyData = () =>{
+        //复制一份数据
+        this.copyTreeData = JSON.parse(JSON.stringify(this.treeData));
+    }
+
     /** 单击事件返回 */
     clickCallBack = (_node) =>{
         // console.log('单击事件返回',_node.label)
@@ -98,7 +104,7 @@ class Tree{
 
     /** 搜索返回事件 */
     seachBack = (data) =>{
-        // console.log('搜索返回事件',data)
+        console.log('搜索返回事件',data)
         this.findData = data;
         //本地搜索
         if(!data.isRemote){
@@ -112,6 +118,10 @@ class Tree{
     /** 查找树节点 */
     findTreeData = (rawTreeData,config) =>{
         let findTxt = config.findTxt;
+        if(findTxt === ''){
+            console.log('rawTreeData',rawTreeData)
+            return rawTreeData;
+        }
         if(!config.isCaseSensitive && config.findTxt){
             findTxt = findTxt.toLocaleLowerCase();
         }

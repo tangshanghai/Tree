@@ -27,7 +27,7 @@ class SeachComponent{
         this.findText.setAttribute('placeholder',config.seachPlaceholder);
 
         this.data = {
-            findText: '',
+            findTxt: '',
             isCaseSensitive: false,
             isRemote: false
         }
