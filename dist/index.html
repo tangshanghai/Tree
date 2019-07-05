@@ -48,7 +48,7 @@
     document.getElementById('treeBox').appendChild(tree.root);
     tree.chooseNodeOfId(treeData[0].id);
     tree.openNodeOfId(treeData[0].id);
-    
+    tree.resetCopyData();
 
     document.getElementById('resetBtn').addEventListener('click',resetBtnClickHandler);
 
