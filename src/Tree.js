@@ -1,7 +1,7 @@
 import TreeNode from './TreeNode.js';
 import SeachComponent from './SeachComponent.js';
 import './Tree.less';
-console.log('==============Tree 0.0.2=================')
+console.log('==============Tree 0.0.3=================')
 class Tree{
     constructor(data,config){
 

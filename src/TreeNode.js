@@ -26,7 +26,7 @@ class TreeNode{
         if(config.typesrc){
             this.ele_iconType.style.background = "url("+config.typesrc+")";
         }
-        this.ele_nodeWord.innerHTML = this.nodeData.label;
+        this.ele_nodeWord.innerText = this.nodeData.label;
         this.ele_nodeWord.setAttribute("title",this.nodeData.label);
         this.ele_nodeWord.style.fontSize = config.fontSize+'px';
 
